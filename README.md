@@ -2,10 +2,14 @@
 # Quick Plugin Manager for Godot engine
 # Tested on version 3.2.3
 
+
 Screen:
 ![screenshot](qpm.png)
 
-[Forked from:](https://github.com/mastermarkus/QuickPluginManager)
+
+Thanks author!
+
+[Forked from](https://github.com/mastermarkus/QuickPluginManager)
 
 
 MIT license

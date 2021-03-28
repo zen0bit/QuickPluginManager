@@ -1,2 +1,2 @@
-![Logo](ico.png)
+![Logo](icon.png)
 # QuickPluginManager

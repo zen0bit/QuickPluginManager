@@ -1,1 +1,2 @@
+![Logo](ico.png)
 # QuickPluginManager

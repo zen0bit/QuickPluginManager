@@ -5,6 +5,9 @@
 Screen:
 ![screenshot](PGM.png)
 
+[Forked from:](https://github.com/mastermarkus/QuickPluginManager)
+
+
 MIT license
 
 Happy creating...

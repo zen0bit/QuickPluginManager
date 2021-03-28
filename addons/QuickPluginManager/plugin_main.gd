@@ -1,10 +1,8 @@
 
-
 #Written:
 #Date: 01/26/2019
 #Author: Markus Septer
-#Contributors:
-
+#Contributors:zen0bit
 
 #How to use:
 #1)If you already have "addons" folder in "res://", jump to step (3)
@@ -17,21 +15,16 @@
 tool
 extends EditorPlugin
 
-
 const PLUGIN_PATH = "res://addons"
 const POPUP_BUTTON_TEXT = "Plugins"
 const MENU_BUTTON_TOOLTIP = "Quickly enable/disable plugins"
 #if you change name of plugin from godot editor this variable also must changed to same
 const PLUGIN_SELF_NAME = "QuickPluginManager"
 
-
 var _plugin_menu_btn = MenuButton.new()
 var _plugins_menu =  _plugin_menu_btn.get_popup()
-
 var _plugins_data = {}
 var _menu_items_idx = 0
-
-
 
 func _enter_tree():
 	_plugin_menu_btn.text = POPUP_BUTTON_TEXT
@@ -44,7 +37,6 @@ func _enter_tree():
 
 	add_control_to_container(EditorPlugin.CONTAINER_TOOLBAR, _plugin_menu_btn)
 
-
 func _item_toggled(item_index, menuObj):
 	var is_item_checked = menuObj.is_item_checked(item_index)
 	_plugins_menu.set_item_checked(item_index, not is_item_checked)
@@ -56,14 +48,11 @@ func _item_toggled(item_index, menuObj):
 			var plugin_folder_name = plugin_info.plugin_folder
 			get_editor_interface().set_plugin_enabled(plugin_folder_name, not is_item_checked)
 
-
-
 func _refresh_plugins_menu_list():
 	_plugins_menu.clear()
 	_menu_items_idx = 0
 	_plugins_data.clear()
 	_populate_menu()
-
 
 func _populate_menu():
 	
@@ -113,10 +102,8 @@ func _populate_menu():
 	else:
 		print("An error occurred when trying to access the path.")
 
-
 func _menu_popup_about_to_show():
 	_refresh_plugins_menu_list()
-
 
 #clean up
 func _exit_tree():
